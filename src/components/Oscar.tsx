@@ -3,10 +3,10 @@ type OscarProps = {
   children: React.ReactNode;
 };
 
-function Oscar(props: OscarProps) {
+function Oscar({ children }: OscarProps) {
   return (
     <div>
-      <h2>{props.children}</h2>
+      <h2>{children}</h2>
     </div>
   );
 }

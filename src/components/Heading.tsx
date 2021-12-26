@@ -3,10 +3,10 @@ type HeadingProps = {
   children: string;
 };
 
-function Heading(props: HeadingProps) {
+function Heading({ children }: HeadingProps) {
   return (
     <div>
-      <h2>{props.children}</h2>
+      <h2>{children}</h2>
     </div>
   );
 }
