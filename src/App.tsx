@@ -9,8 +9,12 @@ import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
 import LoggedIn from "./components/state/LoggedIn";
-import User from "./components/state/User";
+// import User from "./components/state/User";
 import Counter from "./components/state/Counter";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import Box from "./components/context/Box";
+import { UserContextProvider } from "./components/context/UserContext";
+import User from "./components/context/User";
 
 function App() {
   const personName = {
@@ -64,9 +68,16 @@ function App() {
       <Container styles={{ border: "1px solid black", padding: "1rem" }} />
       {/* useState */}
       <LoggedIn />
-      <User />
+      {/* <User /> */}
       {/* useReducer */}
       <Counter />
+      {/* Context */}
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
