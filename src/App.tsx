@@ -22,6 +22,8 @@ import Profile from "./components/auth/Profile";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
+import CustomButton from "./components/html/Button";
+import CustomInput from "./components/html/Input";
 
 function App() {
   const personName = {
@@ -117,6 +119,16 @@ function App() {
       <RandomNumber value={10} isPositive />
       {/* template literals */}
       <Toast position="left-center" />
+      {/* Wrapping HTML Elements */}
+      <CustomButton
+        variant="primary"
+        onClick={() => {
+          console.log("clicked");
+        }}
+      >
+        butondur
+      </CustomButton>
+      <CustomInput type="text" />
     </div>
   );
 }
