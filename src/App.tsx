@@ -19,6 +19,7 @@ import DomRef from "./components/ref/DomRef";
 import MutableRef from "./components/ref/MutableRef";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
+import List from "./components/generics/List";
 
 function App() {
   const personName = {
@@ -87,6 +88,29 @@ function App() {
       <MutableRef />
       {/* component prop */}
       <Private isLoggedIn={true} component={Profile} />
+      {/* Generic props */}
+      <List
+        items={["batman", "superman", "ironman"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} />
+      {/* <List
+        items={[
+          {
+            first: "muratcan",
+            last: "payir",
+          },
+          {
+            first: "dila",
+            last: "kasap",
+          },
+          {
+            first: "cihat",
+            last: "cihat",
+          },
+        ]}
+        onClick={(item) => console.log(item)}
+      /> */}
     </div>
   );
 }
